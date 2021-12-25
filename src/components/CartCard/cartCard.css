@@ -1,6 +1,6 @@
 .cardContainer {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   width: 50rem;
   height: 10rem;
