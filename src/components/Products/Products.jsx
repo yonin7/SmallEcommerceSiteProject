@@ -5,7 +5,7 @@ import Product from "../Product/Product";
 
 
 const Products =({addToCart})=>{
-    const [products,setProducts]=useState(data)
+    const [products]=useState(data)
 
     return(
         <div className="products-container">

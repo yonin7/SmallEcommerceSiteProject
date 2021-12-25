@@ -7,9 +7,8 @@ const Cart = ({cartList,newQuantity,handleDelete}) => {
 
     const totalPay = () => {
         let subtotal=0;
-        let totalperproduct=0;
         let newAarry=cartList.map((product) => {
-            return totalperproduct= product.quantity* product.product.price
+            return product.quantity* product.product.price
         })
         newAarry.forEach((paiment) => {
             subtotal+=paiment
