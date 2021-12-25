@@ -3,12 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Products from './components/Products/Products';
 import Cart from './components/Cart/Cart';
-// import Homepage from './components/Homepage';
+import Homepage from './components/Homepage';
 
-// import Data from '../src/components/data';
-// import Button from '../src/components/Button';
-// import Joke from '../src/components/Joke';
-// import JokeAPI from '../src/api/unsplash';
 import './App.css';
 
 const App = () => {
@@ -63,7 +59,7 @@ const App = () => {
       <Router>
         <Navbar cartCounter={cartCounter} />
         <Switch>
-          {/* <Route path="/" exact component={Homepage} /> */}
+          <Route path="/" exact component={Homepage} />
           <Route path="/products" exact>
             <Products addToCart={addToCart} />
           </Route>

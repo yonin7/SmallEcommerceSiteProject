@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './cart.css'
 import { CartCard } from '../CartCard/CartCard'
 
 
 const Cart = ({cartList,newQuantity,handleDelete}) => {
-    // const [subtotal, setSubtotal] = useState([0]);
 
     const totalPay = () => {
         let subtotal=0;
@@ -25,7 +24,7 @@ const Cart = ({cartList,newQuantity,handleDelete}) => {
                 return <CartCard  key={card.product.id} details={card} newQuantity={newQuantity} handleDelete={handleDelete}/>;
             })}
                 <div className="subtotal">
-                    <span className="subtotalTitle">Subtotal (4 items): </span>
+                    <span className="subtotalTitle">Subtotal : </span>
                     <span> ${totalPay()}</span>
                 </div>
             </div>
