@@ -1,10 +1,11 @@
 import React from 'react';
 import './cart.css'
 import { CartCard } from '../CartCard/CartCard'
+import Payment from '../Payment/Payment'
 
 
-const Cart = ({cartList,newQuantity,handleDelete}) => {
-
+const Cart = ({cartList,clearCart,newQuantity,handleDelete}) => {
+ 
     const totalPay = () => {
         let subtotal=0;
         let newAarry=cartList.map((product) => {
@@ -15,6 +16,9 @@ const Cart = ({cartList,newQuantity,handleDelete}) => {
         })
         return subtotal
     };
+    const reset=()=>{
+        clearCart()
+         }
 
     return (
         <div>
@@ -26,6 +30,7 @@ const Cart = ({cartList,newQuantity,handleDelete}) => {
                     <span className="subtotalTitle">Subtotal : </span>
                     <span> ${totalPay()}</span>
                 </div>
+                <Payment reset={reset} />
             </div>
         </div>
     )

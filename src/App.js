@@ -53,6 +53,10 @@ const App = () => {
     setCartArr(newList);
     setCartCounter(cartCounter - quantity);
   };
+  const clearCart = () => {
+    setCartArr([]);
+    setCartCounter(0);
+  };
 
   return (
     <div className="App">
@@ -66,6 +70,7 @@ const App = () => {
           <Route path="/cart" exact>
             <Cart
               cartList={cartArr}
+              clearCart={clearCart}
               newQuantity={newQuantity}
               handleDelete={handleDelete}
             />
